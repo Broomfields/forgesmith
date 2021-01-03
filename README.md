@@ -13,7 +13,7 @@
 #### Materials also have retainability (Damage goes down with duration)
 
 <pre>
-<b>Old Alloys (Need Folding)</b>
+<b>Traditional Alloys (Need Folding)</b>
 Tamahagane Steel  : Glass Canon until tempered 
 Crucible Steel    : Very Durable, Very Sharp (Damascus/Wootz)
 
