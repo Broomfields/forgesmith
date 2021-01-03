@@ -2,26 +2,28 @@
 
 ## Forgesmith Notes
 
-### Sword Actions
+### Weapon Actions
 
     LMB     : Swing (Standard)
     LMB + R : Stab (/*pokes)
     RMB     : Block (Like old standard)
     RMB + R : Parry (Block with thorns?)
 
-### Sword Materials
+### Materials
 #### Materials also have retainability (Damage goes down with duration)
 
-    **Old Alloys (Need Folding)**
-    Tamahagane Steel  : Glass Canon until tempered 
-    Crucible Steel    : Very Durable, Very Sharp (Damascus/Wootz)
+<pre>
+<b>Old Alloys (Need Folding)</b>
+Tamahagane Steel  : Glass Canon until tempered 
+Crucible Steel    : Very Durable, Very Sharp (Damascus/Wootz)
 
-    **Modern Alloys**
-    Tool Steel        : Very Durable, Medium Sharp
-    Carbon Steel      : Extremely Durable, Extremely Sharp
-    ...
+<b>Modern Alloys</b>
+Tool Steel        : Very Durable, Medium Sharp
+Carbon Steel      : Extremely Durable, Extremely Sharp
+...
+</pre>
 
-### Blade Additions
+### Weapon Additions
 
     Clay tempering  : Durability *("Improves shock absorption and ensures these types of blades can withstand even the toughest battles.")*
     Gilding         : Looting *("Fancy lining of gold.)*
