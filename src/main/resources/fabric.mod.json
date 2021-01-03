@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "forgesmith",
+  "version": "${version}",
+
+  "name": "Forgesmith",
+  "description": "Major overhaul of material/tool/weapon/armour smithing. Initially created to integrate the weapons and armour from the game 'Mordhau', Forgesmith has since surpassed that in scope and overall design with a greater focus on smithing to create advanced materials, tools, weapons, and armour. Mod created by Enstroe.",
+  "authors": [
+    "Shaun Broomfield | Enstroe"
+  ],
+  "contact": {
+    "homepage": "https://shaunbroomfield.com/minecraftmods/forgesmith",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/forgesmith/meta/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.enstroe.Forgesmith"
+    ]
+  },
+  "mixins": [
+    "forgesmith.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
