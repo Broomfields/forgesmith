@@ -25,7 +25,7 @@ Carbon Steel      : Extremely Durable, Extremely Sharp
 
 ### Weapon Additions
 
-    Clay tempering  : Durability *("Improves shock absorption and ensures these types of blades can withstand even the toughest battles.")*
+    Clay tempering  : Durability *("Improves shock absorption and ensures blades can withstand even the toughest battles.")*
     Gilding         : Looting *("Fancy lining of gold.)*
     ...
 
