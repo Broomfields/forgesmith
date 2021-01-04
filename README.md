@@ -4,10 +4,12 @@
 
 ### Weapon Actions
 
-    LMB     : Swing (Standard)
-    LMB + R : Stab (/*pokes)
-    RMB     : Block (Like old standard)
-    RMB + R : Parry (Block with thorns?)
+<pre>
+LMB     : Swing (Standard)
+LMB + R : Stab (*pokes)
+RMB     : Block (Like old standard)
+RMB + R : Parry (Block with thorns?)
+</pre>
 
 ### Materials
 #### Materials also have retainability (Damage goes down with duration)
@@ -25,9 +27,11 @@ Carbon Steel      : Extremely Durable, Extremely Sharp
 
 ### Weapon Additions
 
-    Clay tempering  : Durability *("Improves shock absorption and ensures blades can withstand even the toughest battles.")*
-    Gilding         : Looting *("Fancy lining of gold.)*
-    ...
+<pre>
+Clay tempering  : Durability <b>("Improves shock absorption and ensures blades can withstand even the toughest battles.")</b>
+Gilding         : Looting <b>("Fancy lining of gold.)</b>
+...
+</pre>
 
 ### Forges
 #### In order of progression
