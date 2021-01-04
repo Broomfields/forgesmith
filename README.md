@@ -1,5 +1,8 @@
 # Forgesmith Mod
 
+## Forgesmith Summary
+Foregsmith is a Minecraft mod that brings a major overhaul to material/tool/weapon/armour smithing. Initially created to integrate the weapons and armour from the game 'Mordhau', Forgesmith has since surpassed that in scope and overall design with a greater focus on smithing to create advanced materials/tools/weapons/armour. Mod created by Enstroe. 
+
 ## Forgesmith Notes
 
 ### Weapon Actions
