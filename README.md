@@ -28,18 +28,20 @@ Carbon Steel      : Extremely Durable, Extremely Sharp
 ### Weapon Additions
 
 <pre>
-Clay tempering  : Durability <b>("Improves shock absorption and ensures blades can withstand even the toughest battles.")</b>
-Gilding         : Looting <b>("Fancy lining of gold.)</b>
+Clay tempering  : Durability <i>("Improves shock absorption and ensures blades can withstand even the toughest battles.")</i>
+Gilding         : Looting <i>("Fancy lining of gold.)</i>
 ...
 </pre>
 
 ### Forges
 #### In order of progression
 
-    Tatara Furnace  : (Tamahagane Steel)
-    Wind Furnace    : (Crucible Steel)
-    Blast Furnace   : (Tool Steel)
-    ...
+<pre>
+Tatara Furnace  : (Tamahagane Steel)
+Wind Furnace    : (Crucible Steel)
+Blast Furnace   : (Tool Steel)
+...
+</pre>
 
 ## Developer (Fabric) notes
 
