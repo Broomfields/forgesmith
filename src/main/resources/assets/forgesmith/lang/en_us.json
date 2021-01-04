@@ -1,8 +1,36 @@
 {
-    "itemGroup.forgesmith.group": "Forgesmith",
+    "itemGroup.forgesmith.main": "Forgesmith Materials",
+    "itemGroup.forgesmith.weapons": "Forgesmith Weapons",
 
     "item.forgesmith.tamahagane_steel": "Tamahagane Steel",
     "item.forgesmith.crucible_steel": "Crucible Steel",
     "item.forgesmith.tool_steel": "Tool Steel",
-    "item.forgesmith.carbon_steel": "Carbon Steel"
+    "item.forgesmith.carbon_steel": "Carbon Steel",
+
+    "item.forgesmith.tamahagane_steel_shovel": "Tamahagane Steel Shovel",
+    "item.forgesmith.tamahagane_steel_pickaxe": "Tamahagane Steel Pickaxe",
+    "item.forgesmith.tamahagane_steel_axe": "Tamahagane Steel Axe",
+    "item.forgesmith.tamahagane_steel_hoe": "Tamahagane Steel Hoe",
+    
+    "item.forgesmith.crucible_steel_shovel": "Crucible Steel Shovel",
+    "item.forgesmith.crucible_steel_pickaxe": "Crucible Steel Pickaxe",
+    "item.forgesmith.crucible_steel_axe": "Crucible Steel Axe",
+    "item.forgesmith.crucible_steel_hoe": "Crucible Steel Hoe",
+    
+    "item.forgesmith.tool_steel_shovel": "Tool Steel Shovel",
+    "item.forgesmith.tool_steel_pickaxe": "Tool Steel Pickaxe",
+    "item.forgesmith.tool_steel_axe": "Tool Steel Axe",
+    "item.forgesmith.tool_steel_hoe": "Tool Steel Hoe",
+    
+    "item.forgesmith.carbon_steel_shovel": "Carbon Steel Shovel",
+    "item.forgesmith.carbon_steel_pickaxe": "Carbon Steel Pickaxe",
+    "item.forgesmith.carbon_steel_axe": "Carbon Steel Axe",
+    "item.forgesmith.carbon_steel_hoe": "Carbon Steel Hoe",
+
+    "item.forgesmith.tamahagane_steel_arming_sword": "Tamahagane Steel Arming Sword",
+    "item.forgesmith.crucible_steel_arming_sword": "Crucible Steel Arming Sword",
+    "item.forgesmith.tool_steel_arming_sword": "Tool Steel Arming Sword",
+    "item.forgesmith.carbon_steel_arming_sword": "Carbon Steel Arming Sword"
+
+
 }

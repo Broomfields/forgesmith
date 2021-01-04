@@ -1,9 +1,9 @@
 package com.github.enstroe.tools;
 
 import com.github.enstroe.items.TamahaganeSteelItem;
-// import com.github.enstroe.items.CrucibleSteelItem;
-// import com.github.enstroe.items.ToolSteelItem;
-// import com.github.enstroe.items.CarbonSteelItem;
+import com.github.enstroe.items.CrucibleSteelItem;
+import com.github.enstroe.items.ToolSteelItem;
+import com.github.enstroe.items.CarbonSteelItem;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.Item;
@@ -17,19 +17,19 @@ public enum ModToolMaterials implements ToolMaterial {
     //Steel Constructors
     TAMAHAGANE_STEEL("tamahagane_steel", 0.6f, 6.3f, 2.2f, 2, 12, () -> {
         return Ingredient.ofItems(new TamahaganeSteelItem(new Item.Settings()));
-    }); //Tamahagane
+    }), //Tamahagane
 
-    // CRUCIBLE_STEEL("crucible_steel", 0.6f, 6.3f, 2.2f, 2, 12, () -> {
-    //     return Ingredient.ofItems(new CrucibleSteelItem(new Item.Settings()));
-    // }); //Crucible
+    CRUCIBLE_STEEL("crucible_steel", 0.6f, 6.3f, 2.2f, 2, 12, () -> {
+        return Ingredient.ofItems(new CrucibleSteelItem(new Item.Settings()));
+    }), //Crucible
 
-    // TOOL_STEEL("tool_steel", 0.6f, 6.3f, 2.2f, 2, 12, () -> {
-    //     return Ingredient.ofItems(Items.TOOL_STEEL);
-    // }); //Tool
+    TOOL_STEEL("tool_steel", 0.6f, 6.3f, 2.2f, 2, 12, () -> {
+        return Ingredient.ofItems(new ToolSteelItem(new Item.Settings()));
+    }), //Tool
 
-    // CARBON_STEEL("carbon_steel", 0.6f, 6.3f, 2.2f, 2, 12, () -> {
-    //     return Ingredient.ofItems(Items.CARBON_STEEL);
-    // }); //Carbon
+    CARBON_STEEL("carbon_steel", 0.6f, 6.3f, 2.2f, 2, 12, () -> {
+        return Ingredient.ofItems(new CarbonSteelItem(new Item.Settings()));
+    }); //Carbon
 
     //Allows for expansion with future tool sets
 
