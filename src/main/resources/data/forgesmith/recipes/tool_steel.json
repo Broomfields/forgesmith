@@ -1,0 +1,11 @@
+
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        { "item": "forgesmith:tool_steel_block" }
+    ],
+    "result": {
+        "item": "forgesmith:tool_steel",
+        "count": 9
+    }
+}

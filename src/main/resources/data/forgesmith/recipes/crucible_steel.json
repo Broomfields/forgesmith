@@ -1,0 +1,11 @@
+
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        { "item": "forgesmith:crucible_steel_block" }
+    ],
+    "result": {
+        "item": "forgesmith:crucible_steel",
+        "count": 9
+    }
+}

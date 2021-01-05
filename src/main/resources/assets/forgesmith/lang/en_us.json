@@ -2,6 +2,12 @@
     "itemGroup.forgesmith.main": "Forgesmith Materials",
     "itemGroup.forgesmith.weapons": "Forgesmith Weapons",
 
+    "block.forgesmith.tamahagane_steel_block": "Tamahagane Steel Block",
+    "block.forgesmith.crucible_steel_block": "Crucible Steel Block",
+    "block.forgesmith.tool_steel_block": "Tool Steel Block",
+    "block.forgesmith.carbon_steel_block": "Carbon Steel Block",
+
+    "item.forgesmith.iron_sand": "Iron Sand",
     "item.forgesmith.tamahagane_steel": "Tamahagane Steel",
     "item.forgesmith.crucible_steel": "Crucible Steel",
     "item.forgesmith.tool_steel": "Tool Steel",

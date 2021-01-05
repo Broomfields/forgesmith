@@ -1,0 +1,11 @@
+
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        { "item": "forgesmith:tamahagane_steel_block" }
+    ],
+    "result": {
+        "item": "forgesmith:tamahagane_steel",
+        "count": 9
+    }
+}

@@ -2,6 +2,10 @@ package com.github.enstroe;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.block.Material;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -20,6 +24,7 @@ import com.github.enstroe.tools.ModHoeItem;
 import com.github.enstroe.weapons.ModSwordItem;
 
 
+import com.github.enstroe.items.IronSandItem;
 import com.github.enstroe.items.TamahaganeSteelItem;
 import com.github.enstroe.items.CrucibleSteelItem;
 import com.github.enstroe.items.ToolSteelItem;
@@ -40,12 +45,24 @@ public class Forgesmith implements ModInitializer {
 	private static final ItemGroup GROUP_MAIN = FabricItemGroupBuilder.build(new Identifier(MODID, "main"), () -> new ItemStack(Forgesmith.TAMAHAGANE_STEEL));
 	private static final ItemGroup GROUP_WEAPONS = FabricItemGroupBuilder.build(new Identifier(MODID, "weapons"), () -> new ItemStack(Forgesmith.CRUCIBLE_STEEL));
 
+	//Blocks
+	private static final Block TAMAHAGANE_STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
+	private static final Block CRUCIBLE_STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
+	private static final Block TOOL_STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
+	private static final Block CARBON_STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
+
+	//Block Items
+	private static final Item TAMAHAGANE_STEEL_BLOCK_ITEM = new BlockItem(TAMAHAGANE_STEEL_BLOCK, new Item.Settings().group(GROUP_MAIN).maxCount(64));
+	private static final Item CRUCIBLE_STEEL_BLOCK_ITEM = new BlockItem(CRUCIBLE_STEEL_BLOCK, new Item.Settings().group(GROUP_MAIN).maxCount(64));
+	private static final Item TOOL_STEEL_BLOCK_ITEM = new BlockItem(TOOL_STEEL_BLOCK, new Item.Settings().group(GROUP_MAIN).maxCount(64));
+	private static final Item CARBON_STEEL_BLOCK_ITEM = new BlockItem(CARBON_STEEL_BLOCK, new Item.Settings().group(GROUP_MAIN).maxCount(64));
+
 	//Steel Crafting Compnents
+	private static final Item IRON_SAND = new IronSandItem(new Item.Settings().group(GROUP_MAIN).maxCount(64));
 	private static final Item TAMAHAGANE_STEEL = new TamahaganeSteelItem(new Item.Settings().group(GROUP_MAIN).maxCount(64));
 	private static final Item CRUCIBLE_STEEL = new CrucibleSteelItem(new Item.Settings().group(GROUP_MAIN).maxCount(64));
 	private static final Item TOOL_STEEL = new ToolSteelItem(new Item.Settings().group(GROUP_MAIN).maxCount(64));
 	private static final Item CARBON_STEEL = new CarbonSteelItem(new Item.Settings().group(GROUP_MAIN).maxCount(64));
-
 
 	//Tamahagane Steel Tools
 	public static final ToolItem TAMAHAGANE_STEEL_SHOVEL = new ModShovelItem(ModToolMaterials.TAMAHAGANE_STEEL, 2, -2.4F, new Item.Settings().group(GROUP_MAIN));
@@ -71,7 +88,6 @@ public class Forgesmith implements ModInitializer {
 	public static final ToolItem CARBON_STEEL_AXE = new ModAxeItem(ModToolMaterials.CARBON_STEEL, 2, -2.4F, new Item.Settings().group(GROUP_MAIN));
 	public static final ToolItem CARBON_STEEL_HOE = new ModHoeItem(ModToolMaterials.CARBON_STEEL, 2, -2.4F, new Item.Settings().group(GROUP_MAIN));
 
-
 	//Weapons (Temporary)
 	public static final ToolItem TAMAHAGANE_STEEL_ARMING_SWORD = new ModSwordItem(ModToolMaterials.TAMAHAGANE_STEEL, 7, -2.4F, new Item.Settings().group(GROUP_WEAPONS));
 	public static final ToolItem CRUCIBLE_STEEL_ARMING_SWORD = new ModSwordItem(ModToolMaterials.CRUCIBLE_STEEL, 7, -2.4F, new Item.Settings().group(GROUP_WEAPONS));
@@ -89,7 +105,20 @@ public class Forgesmith implements ModInitializer {
 		///////////////////
 		/// Item Registry
 
+		//Blocks
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "tamahagane_steel_block"), TAMAHAGANE_STEEL_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "crucible_steel_block"), CRUCIBLE_STEEL_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "tool_steel_block"), TOOL_STEEL_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "carbon_steel_block"), CARBON_STEEL_BLOCK);
+
+		//Block Items
+		Registry.register(Registry.ITEM, new Identifier(MODID, "tamahagane_steel_block"), TAMAHAGANE_STEEL_BLOCK_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MODID, "crucible_steel_block"), CRUCIBLE_STEEL_BLOCK_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MODID, "tool_steel_block"), TOOL_STEEL_BLOCK_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MODID, "carbon_steel_block"), CARBON_STEEL_BLOCK_ITEM);
+
 		// Crafting Components
+		Registry.register(Registry.ITEM, new Identifier(MODID, "iron_sand"), IRON_SAND);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "tamahagane_steel"), TAMAHAGANE_STEEL);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "crucible_steel"), CRUCIBLE_STEEL);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "tool_steel"), TOOL_STEEL);

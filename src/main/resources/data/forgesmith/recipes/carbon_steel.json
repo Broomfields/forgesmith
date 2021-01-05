@@ -1,0 +1,11 @@
+
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        { "item": "forgesmith:carbon_steel_block" }
+    ],
+    "result": {
+        "item": "forgesmith:carbon_steel",
+        "count": 9
+    }
+}
