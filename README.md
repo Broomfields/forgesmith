@@ -1,13 +1,18 @@
 # Forgesmith Mod
 
+## Forgesmith Summary
+Forgesmith is a Minecraft mod that brings a major overhaul to material/tool/weapon/armour smithing. Initially created to integrate the weapons and armour from the game 'Mordhau', Forgesmith has since surpassed that in scope and overall design with a greater focus on smithing to create advanced materials/tools/weapons/armour. Mod created by Enstroe. 
+
 ## Forgesmith Notes
 
 ### Weapon Actions
 
-    LMB     : Swing (Standard)
-    LMB + R : Stab (/*pokes)
-    RMB     : Block (Like old standard)
-    RMB + R : Parry (Block with thorns?)
+<pre>
+LMB     : Swing (Standard)
+LMB + R : Stab (*pokes)
+RMB     : Block (Like old standard)
+RMB + R : Parry (Block with thorns?)
+</pre>
 
 ### Materials
 #### Materials also have retainability (Damage goes down with duration)
@@ -25,17 +30,21 @@ Carbon Steel      : Extremely Durable, Extremely Sharp
 
 ### Weapon Additions
 
-    Clay tempering  : Durability *("Improves shock absorption and ensures these types of blades can withstand even the toughest battles.")*
-    Gilding         : Looting *("Fancy lining of gold.)*
-    ...
+<pre>
+Clay tempering  : Durability <i>("Improves shock absorption and ensures blades can withstand even the toughest battles.")</i>
+Gilding         : Looting <i>("Fancy lining of gold.)</i>
+...
+</pre>
 
 ### Forges
 #### In order of progression
 
-    Tatara Furnace  : (Tamahagane Steel)
-    Wind Furnace    : (Crucible Steel)
-    Blast Furnace   : (Tool Steel)
-    ...
+<pre>
+Tatara Furnace  : (Tamahagane Steel)
+Wind Furnace    : (Crucible Steel)
+Blast Furnace   : (Tool Steel)
+...
+</pre>
 
 ## Developer (Fabric) notes
 
