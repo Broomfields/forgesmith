@@ -7,7 +7,10 @@
     "block.forgesmith.tool_steel_block": "Tool Steel Block",
     "block.forgesmith.carbon_steel_block": "Carbon Steel Block",
 
-    "item.forgesmith.iron_sand": "Iron Sand",
+    "item.forgesmith.rich_iron_sand": "Rich Iron Sand",
+    "item.forgesmith.poor_iron_sand": "Poor Iron Sand",
+    "item.forgesmith.rich_iron_slag": "Rich Iron Slag",
+    "item.forgesmith.poor_iron_slag": "Poor Iron Slag",
     "item.forgesmith.tamahagane_steel": "Tamahagane Steel",
     "item.forgesmith.crucible_steel": "Crucible Steel",
     "item.forgesmith.tool_steel": "Tool Steel",

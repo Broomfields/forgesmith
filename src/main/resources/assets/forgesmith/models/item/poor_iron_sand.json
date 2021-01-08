@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "forgesmith:item/iron_sand"
+        "layer0": "forgesmith:item/poor_iron_sand"
     }
 }

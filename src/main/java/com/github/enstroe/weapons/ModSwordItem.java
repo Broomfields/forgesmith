@@ -2,8 +2,6 @@ package com.github.enstroe.weapons;
 
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.Item.Settings;
-
 
 public class ModSwordItem extends SwordItem {
 
