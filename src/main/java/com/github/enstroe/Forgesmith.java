@@ -15,6 +15,7 @@ import net.minecraft.item.ToolItem;
 import net.minecraft.recipe.CookingRecipeSerializer;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -33,6 +34,7 @@ import com.github.enstroe.items.TamahaganeSteelItem;
 import com.github.enstroe.items.CrucibleSteelItem;
 import com.github.enstroe.items.ToolSteelItem;
 import com.github.enstroe.recipe.ForgeRecipe;
+import com.github.enstroe.screen.ForgeScreenHandler;
 import com.github.enstroe.block.Forge;
 import com.github.enstroe.block.entity.ForgeBlockEntity;
 import com.github.enstroe.items.CarbonSteelItem;
@@ -47,15 +49,15 @@ public class Forgesmith implements ModInitializer {
 
 
 	//Abstract
-	public static final FORGE_FURNACE_SCREEN_HANDLER = ForgeScreenHandler::new;
-	public static final RecipeSerializer<ForgeRecipe> FORGE_RECIPE_SERIALIZER = new CookingRecipeSerializer(ForgeRecipe::new, 200);
 	public static final RecipeType<ForgeRecipe> FORGE_RECIPE_TYPE = new RecipeType<ForgeRecipe>() {
 		@Override
 		public String toString() {
 			return "forge";
 		}
 	};
-
+	
+	public static final RecipeSerializer<ForgeRecipe> FORGE_RECIPE_SERIALIZER = new CookingRecipeSerializer(ForgeRecipe::new, 200);
+    public static final ScreenHandlerType<ForgeScreenHandler> FORGE_SCREEN_HANDLER = ForgeScreenHandler::new;
 
 
 	///////////////////
@@ -122,18 +124,13 @@ public class Forgesmith implements ModInitializer {
 	public static final ToolItem TOOL_STEEL_ARMING_SWORD = new ModSwordItem(ModToolMaterials.TOOL_STEEL, 7, -2.4F, new Item.Settings().group(GROUP_WEAPONS));
 	public static final ToolItem CARBON_STEEL_ARMING_SWORD = new ModSwordItem(ModToolMaterials.CARBON_STEEL, 7, -2.4F, new Item.Settings().group(GROUP_WEAPONS));
 
-	@Override
-	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-
-		///////////////////
-		/// Object Registry
-
+	
+	///////////////////
+	/// Object Registry
+	static {
 		//Screen Handlers
-		ScreenHandlerRegistry.registerSimple(new Identifier(MODID, "forge"), FORGE_FURNACE_SCREEN_HANDLER);
+		Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MODID, "forge"), FORGE_RECIPE_SERIALIZER);
+		ScreenHandlerRegistry.registerSimple(new Identifier(MODID, "forge"), FORGE_SCREEN_HANDLER);
 
 		//Forge Recipes
 		Registry.register(Registry.RECIPE_TYPE, new Identifier(MODID, "forge"), FORGE_RECIPE_TYPE);
@@ -195,7 +192,14 @@ public class Forgesmith implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MODID, "crucible_steel_arming_sword"), CRUCIBLE_STEEL_ARMING_SWORD);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "tool_steel_arming_sword"), TOOL_STEEL_ARMING_SWORD);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "carbon_steel_arming_sword"), CARBON_STEEL_ARMING_SWORD);
+	}
 
+
+	@Override
+	public void onInitialize() {
+		// This code runs as soon as Minecraft is in a mod-load-ready state.
+		// However, some things (like resources) may still be uninitialized.
+		// Proceed with mild caution.
 
 		///////////////////
 		/// Debug
