@@ -12,7 +12,7 @@ import net.minecraft.recipe.RecipeSerializer;
 public class ForgeRecipe extends AbstractCookingRecipe {
     //Same for the BlockEntity, we don't need some of the parameters in the constructor since we already now the type
     public ForgeRecipe(Identifier id, String group, Ingredient input, ItemStack output, float experience, int cookTime) {
-        super(Forgesmith.TEST_RECIPE_TYPE, id, group, input, output, experience, cookTime);
+        super(Forgesmith.FORGE_RECIPE_TYPE, id, group, input, output, experience, cookTime);
     }
     
     @Override

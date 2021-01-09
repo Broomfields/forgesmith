@@ -3,6 +3,7 @@ package com.github.enstroe;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
@@ -13,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolItem;
 import net.minecraft.recipe.CookingRecipeSerializer;
 import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.RecipeType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -44,16 +46,22 @@ public class Forgesmith implements ModInitializer {
 	private static final String MODID = "forgesmith";
 
 
-	///////////////////
-	/// Absract Declaration
-
+	//Abstract
+	public static final FORGE_FURNACE_SCREEN_HANDLER = ForgeScreenHandler::new;
 	public static final RecipeSerializer<ForgeRecipe> FORGE_RECIPE_SERIALIZER = new CookingRecipeSerializer(ForgeRecipe::new, 200);
+	public static final RecipeType<ForgeRecipe> FORGE_RECIPE_TYPE = new RecipeType<ForgeRecipe>() {
+		@Override
+		public String toString() {
+			return "forge";
+		}
+	};
 
 
 
 	///////////////////
-	/// Item Declaration
+	/// Object Declaration
 
+	//Item Groups
 	private static final ItemGroup GROUP_MAIN = FabricItemGroupBuilder.build(new Identifier(MODID, "main"), () -> new ItemStack(Forgesmith.TAMAHAGANE_STEEL));
 	private static final ItemGroup GROUP_WEAPONS = FabricItemGroupBuilder.build(new Identifier(MODID, "weapons"), () -> new ItemStack(Forgesmith.CRUCIBLE_STEEL));
 
@@ -62,7 +70,7 @@ public class Forgesmith implements ModInitializer {
 	private static final Block CRUCIBLE_STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
 	private static final Block TOOL_STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
 	private static final Block CARBON_STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
-	public static final  Block FORGE_BLOCK = new Forge(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
+	public  static final Block FORGE_BLOCK = new Forge(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
 	
 	//Block Items
 	private static final Item TAMAHAGANE_STEEL_BLOCK_ITEM = new BlockItem(TAMAHAGANE_STEEL_BLOCK, new Item.Settings().group(GROUP_MAIN).maxCount(64));
@@ -122,7 +130,13 @@ public class Forgesmith implements ModInitializer {
 
 
 		///////////////////
-		/// Item Registry
+		/// Object Registry
+
+		//Screen Handlers
+		ScreenHandlerRegistry.registerSimple(new Identifier(MODID, "forge"), FORGE_FURNACE_SCREEN_HANDLER);
+
+		//Forge Recipes
+		Registry.register(Registry.RECIPE_TYPE, new Identifier(MODID, "forge"), FORGE_RECIPE_TYPE);
 
 		//Blocks
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "tamahagane_steel_block"), TAMAHAGANE_STEEL_BLOCK);

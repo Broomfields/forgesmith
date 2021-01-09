@@ -10,7 +10,7 @@ import net.minecraft.text.Text;
 public class ForgeBlockEntity extends AbstractFurnaceBlockEntity {
     //Since we already now the BlockEntityType and RecipeType we don't need them in the constructor's parameters
     public ForgeBlockEntity() {
-        super(Forgesmith.FORGE_BLOCK_ENTITY, Forgesmith.TEST_RECIPE_TYPE);
+        super(Forgesmith.FORGE_BLOCK_ENTITY, Forgesmith.FORGE_RECIPE_TYPE);
     }
  
     @Override
