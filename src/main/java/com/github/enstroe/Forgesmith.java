@@ -128,6 +128,7 @@ public class Forgesmith implements ModInitializer {
 	///////////////////
 	/// Object Registry
 	static {
+		
 		//Screen Handlers
 		Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MODID, "forge"), FORGE_RECIPE_SERIALIZER);
 		ScreenHandlerRegistry.registerSimple(new Identifier(MODID, "forge"), FORGE_SCREEN_HANDLER);

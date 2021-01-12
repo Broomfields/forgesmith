@@ -6,7 +6,7 @@ import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.stat.Stats;
+// import net.minecraft.stat.Stats;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -28,7 +28,7 @@ public class Forge extends AbstractFurnaceBlock {
         if (blockEntity instanceof ForgeBlockEntity) {
             player.openHandledScreen((NamedScreenHandlerFactory)blockEntity);
             // Optional: increment player's stat
-            player.incrementStat(Stats.INTERACT_WITH_FURNACE);
+            // player.incrementStat(Stats.INTERACT_WITH_FURNACE);
         }
     }
 }
